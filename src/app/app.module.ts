@@ -8,18 +8,17 @@ import { environment } from '../environments/environment';
 
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { PeliculaCRUDService } from './servicios/pelicula-crud.service';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [PeliculaCRUDService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
